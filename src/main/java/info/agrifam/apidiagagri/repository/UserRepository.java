@@ -1,6 +1,7 @@
-package com.gm2.pdv.repository;
+package info.agrifam.apidiagagri.repository;
 
-import com.gm2.pdv.entity.User;
+
+import info.agrifam.apidiagagri.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

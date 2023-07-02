@@ -1,4 +1,6 @@
 package info.agrifam.apidiagagri.noticia;
 
-public interface NoticiaRepository extends org.springframework.data.jpa.repository.JpaRepository<info.agrifam.apidiagagri.noticia.Noticia, java.lang.Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface NoticiaRepository extends JpaRepository<Noticia, Long> {
 }

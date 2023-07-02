@@ -1,4 +1,9 @@
 package info.agrifam.apidiagagri.sanitarismo;
 
-public interface ViewConsultaSanitarismoDownloadRepository extends org.springframework.data.jpa.repository.JpaRepository<info.agrifam.apidiagagri.sanitarismo.ViewConsultaSanitarismoDownload, java.lang.Integer> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ViewConsultaSanitarismoDownloadRepository extends JpaRepository<ViewConsultaSanitarismoDownload, Integer> {
+    List<ViewConsultaSanitarismoDownload> findByLoginDownload(String loginDownload);
 }

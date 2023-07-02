@@ -1,19 +1,20 @@
-package com.gm2.pdv.service;
+package info.agrifam.apidiagagri.service;
 
-import com.gm2.pdv.dto.ProductSaleDTO;
-import com.gm2.pdv.dto.ProductInfoDTO;
-import com.gm2.pdv.dto.SaleDTO;
-import com.gm2.pdv.dto.SaleInfoDTO;
-import com.gm2.pdv.entity.ItemSale;
-import com.gm2.pdv.entity.Product;
-import com.gm2.pdv.entity.Sale;
-import com.gm2.pdv.entity.User;
-import com.gm2.pdv.exceptions.InvalidOperationException;
-import com.gm2.pdv.exceptions.NoItemException;
-import com.gm2.pdv.repository.ItemSaleRepository;
-import com.gm2.pdv.repository.ProductRepository;
-import com.gm2.pdv.repository.SaleRepository;
-import com.gm2.pdv.repository.UserRepository;
+
+import info.agrifam.apidiagagri.dto.ProductInfoDTO;
+import info.agrifam.apidiagagri.dto.ProductSaleDTO;
+import info.agrifam.apidiagagri.dto.SaleDTO;
+import info.agrifam.apidiagagri.dto.SaleInfoDTO;
+import info.agrifam.apidiagagri.entity.ItemSale;
+import info.agrifam.apidiagagri.entity.Product;
+import info.agrifam.apidiagagri.entity.Sale;
+import info.agrifam.apidiagagri.entity.User;
+import info.agrifam.apidiagagri.exceptions.InvalidOperationException;
+import info.agrifam.apidiagagri.exceptions.NoItemException;
+import info.agrifam.apidiagagri.repository.ItemSaleRepository;
+import info.agrifam.apidiagagri.repository.ProductRepository;
+import info.agrifam.apidiagagri.repository.SaleRepository;
+import info.agrifam.apidiagagri.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -90,6 +91,8 @@ public class SaleService {
 
         return newSale.getId();
     }
+
+
 
     private void saveItemSale(List<ItemSale> items, Sale newSale) {
         for (ItemSale item: items){

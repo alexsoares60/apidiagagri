@@ -1,4 +1,4 @@
-package com.gm2.pdv.dto;
+package info.agrifam.apidiagagri.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,4 +11,7 @@ public class TokenDTO {
 
     private String token;
     private String validity;
+    private String login;
+    private String email;
+    private String nome;
 }

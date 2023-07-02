@@ -1,7 +1,5 @@
-package info.agrifam.apidiag.areaconhecimento;
+package info.agrifam.apidiagagri.areaconhecimento;
 
-import info.agrifam.apidiag.pessoas.PessoaDto;
-import info.agrifam.apidiag.sanitarismo.Sanitarismo;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

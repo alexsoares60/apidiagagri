@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.produtos;
+package info.agrifam.apidiagagri.produtos;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

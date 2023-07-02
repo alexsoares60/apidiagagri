@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.diagnosticos;
+package info.agrifam.apidiagagri.diagnosticos;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.Instant;
 import java.time.LocalDate;
 
 @Getter
@@ -60,5 +61,14 @@ public class Caracterizacao {
     @Size(max = 32)
     @Column(name = "login", length = 32)
     private String login;
+    @Column(name = "fazdownload")
+    private Character fazdownload;
+
+    @Size(max = 32)
+    @Column(name = "login_download", length = 32)
+    private String loginDownload;
+
+    @Column(name = "dtalteracao")
+    private Instant dtalteracao;
 
 }

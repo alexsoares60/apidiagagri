@@ -1,4 +1,4 @@
-package com.gm2.pdv.controller;
+package info.agrifam.apidiagagri.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

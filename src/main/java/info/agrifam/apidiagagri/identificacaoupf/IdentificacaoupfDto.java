@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.identificacaoupf;
+package info.agrifam.apidiagagri.identificacaoupf;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotNull;

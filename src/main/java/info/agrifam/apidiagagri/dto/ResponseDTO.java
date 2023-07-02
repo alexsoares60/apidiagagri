@@ -1,4 +1,4 @@
-package com.gm2.pdv.dto;
+package info.agrifam.apidiagagri.dto;
 
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.consultas;
+package info.agrifam.apidiagagri.consultas;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

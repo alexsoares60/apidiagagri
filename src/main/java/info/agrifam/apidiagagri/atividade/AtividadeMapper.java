@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.atividade;
+package info.agrifam.apidiagagri.atividade;
 
 import org.mapstruct.*;
 

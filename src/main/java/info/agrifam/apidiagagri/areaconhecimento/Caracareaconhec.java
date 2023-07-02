@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.areaconhecimento;
+package info.agrifam.apidiagagri.areaconhecimento;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

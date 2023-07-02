@@ -1,4 +1,9 @@
-package info.agrifam.apidiagagri;
+package info.agrifam.apidiagagri.userprojetos;
 
-public interface ConsultaProjetosUsuariosProjetoRepository extends org.springframework.data.jpa.repository.JpaRepository<info.agrifam.apidiagagri.ConsultaProjetosUsuariosProjeto, java.lang.Integer> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ConsultaProjetosUsuariosProjetoRepository extends JpaRepository<ConsultaProjetosUsuariosProjeto, Integer> {
+    List<ConsultaProjetosUsuariosProjeto> findAllByLogin(String login);
 }

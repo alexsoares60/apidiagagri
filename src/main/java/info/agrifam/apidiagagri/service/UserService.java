@@ -1,11 +1,12 @@
-package com.gm2.pdv.service;
+package info.agrifam.apidiagagri.service;
 
-import com.gm2.pdv.dto.UserDTO;
-import com.gm2.pdv.dto.UserResponseDTO;
-import com.gm2.pdv.entity.User;
-import com.gm2.pdv.exceptions.NoItemException;
-import com.gm2.pdv.repository.UserRepository;
-import com.gm2.pdv.security.SecurityConfig;
+
+import info.agrifam.apidiagagri.dto.UserDTO;
+import info.agrifam.apidiagagri.dto.UserResponseDTO;
+import info.agrifam.apidiagagri.entity.User;
+import info.agrifam.apidiagagri.exceptions.NoItemException;
+import info.agrifam.apidiagagri.repository.UserRepository;
+import info.agrifam.apidiagagri.security.SecurityConfig;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

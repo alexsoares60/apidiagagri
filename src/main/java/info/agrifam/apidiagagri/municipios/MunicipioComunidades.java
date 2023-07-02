@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.municipios;
+package info.agrifam.apidiagagri.municipios;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

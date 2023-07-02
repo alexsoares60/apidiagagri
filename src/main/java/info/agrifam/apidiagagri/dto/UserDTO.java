@@ -1,11 +1,10 @@
-package com.gm2.pdv.dto;
+package info.agrifam.apidiagagri.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
 
 @Data
 @NoArgsConstructor
@@ -20,4 +19,6 @@ public class UserDTO {
     @NotBlank(message = "O campo senha é obrigatório")
     private String password;
     private Integer isEnabled;
+
+
 }

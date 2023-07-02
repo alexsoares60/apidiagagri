@@ -1,4 +1,12 @@
 package info.agrifam.apidiagagri.identificacaoupf;
 
-public interface ViewIdentificacaoDownloadRepository extends org.springframework.data.jpa.repository.JpaRepository<info.agrifam.apidiagagri.identificacaoupf.ViewIdentificacaoDownload, java.lang.Integer> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ViewIdentificacaoDownloadRepository extends JpaRepository<ViewIdentificacaoDownload, Integer> {
+//    List<ViewIdentificacaoDownload> findByLoginDownloadLike(String loginDownload);
+
+
+    List<ViewIdentificacaoDownload> findAllByLoginDownload(String arglogindownload);
 }

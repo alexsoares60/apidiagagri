@@ -1,8 +1,10 @@
-package com.gm2.pdv.controller;
+package info.agrifam.apidiagagri.controller;
 
-import com.gm2.pdv.dto.ResponseDTO;
-import com.gm2.pdv.dto.UserDTO;
-import com.gm2.pdv.service.UserService;
+
+import info.agrifam.apidiagagri.dto.ResponseDTO;
+import info.agrifam.apidiagagri.dto.UserDTO;
+import info.agrifam.apidiagagri.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
@@ -10,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+
 
 @Controller
 @RequestMapping("/user")

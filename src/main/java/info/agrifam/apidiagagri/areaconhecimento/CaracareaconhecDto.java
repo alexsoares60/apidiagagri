@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.areaconhecimento;
+package info.agrifam.apidiagagri.areaconhecimento;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

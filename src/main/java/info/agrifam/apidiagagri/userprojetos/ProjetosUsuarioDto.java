@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.userprojetos;
+package info.agrifam.apidiagagri.userprojetos;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

@@ -1,8 +1,9 @@
-package info.agrifam.apidiag.diagnosticos;
+package info.agrifam.apidiagagri.diagnosticos;
 
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -29,12 +30,26 @@ public class CaracterizacaoController {
     public CaracterizacaoDto save(@RequestBody CaracterizacaoDto caracterizacaoDto) {
 
         Caracterizacao caracterizacao =  caracterizacaoMapper.toEntity(caracterizacaoDto);
+        Optional<Caracterizacao> optional1 = caracterizacaoRepository.findByDtcaracterizacaoupfAndIdpessoachefefamilia( caracterizacao.getDtcaracterizacaoupf(),caracterizacao.getIdpessoachefefamilia());
+        System.out.println("Caracterização opcional "+optional1.toString());
+
+        if(optional1.isPresent()){
+            System.out.println("Caracterização já inserida "+optional1.toString());
+            Caracterizacao db = optional1.get();
+            Integer rtn = optional1.get().getId();
+            System.out.println("Caracterização idcarac "+rtn.toString());
+            caracterizacao.setId(rtn);
+            Caracterizacao caracterizacao1 = caracterizacaoMapper.partialUpdate(caracterizacaoDto, caracterizacao);
+            return caracterizacaoMapper.toDto(caracterizacaoRepository.save(caracterizacao1));
+//            System.out.println(caracterizacaoUPFnova.toString());
+
+        }
         return caracterizacaoMapper.toDto(caracterizacaoRepository.save(caracterizacao));
     }
     @PostMapping("/alterar")
     public CaracterizacaoDto update(@RequestBody  CaracterizacaoDto caracterizacaoDto) {
         if (caracterizacaoDto.getId() == null) {
-            throw new IllegalArgumentException("Uso Água ID não nula, faça um novo lançamento");
+            throw new IllegalArgumentException("Caracterização ID não nula, faça um novo lançamento");
 
         }
         Caracterizacao caracterizacao = caracterizacaoRepository.findById(caracterizacaoDto.getId()).orElseThrow();

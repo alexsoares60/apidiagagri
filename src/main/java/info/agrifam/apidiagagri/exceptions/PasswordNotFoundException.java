@@ -1,4 +1,4 @@
-package com.gm2.pdv.exceptions;
+package info.agrifam.apidiagagri.exceptions;
 
 public class PasswordNotFoundException extends RuntimeException {
     public PasswordNotFoundException(String message) {

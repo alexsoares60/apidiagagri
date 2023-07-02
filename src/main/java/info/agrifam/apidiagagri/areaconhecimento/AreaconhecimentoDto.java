@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.areaconhecimento;
+package info.agrifam.apidiagagri.areaconhecimento;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 @Data
 public class AreaconhecimentoDto implements Serializable {
-    private final Integer id;
+    private final Integer idareadeconhecimento;
     @Size(max = 80)
     @NotNull
     private final String nmareadeconhecimento;

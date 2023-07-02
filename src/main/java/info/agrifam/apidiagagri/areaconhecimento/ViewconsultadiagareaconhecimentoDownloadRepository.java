@@ -1,4 +1,9 @@
 package info.agrifam.apidiagagri.areaconhecimento;
 
-public interface ViewconsultadiagareaconhecimentoDownloadRepository extends org.springframework.data.jpa.repository.JpaRepository<info.agrifam.apidiagagri.areaconhecimento.ViewconsultadiagareaconhecimentoDownload, java.lang.String> {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ViewconsultadiagareaconhecimentoDownloadRepository extends JpaRepository<ViewconsultadiagareaconhecimentoDownload, String> {
+    List<ViewconsultadiagareaconhecimentoDownload> findByLogindownload(String logindownload);
 }

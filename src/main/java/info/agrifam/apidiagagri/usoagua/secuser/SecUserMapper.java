@@ -1,4 +1,4 @@
-package info.agrifam.apidiagagri.secuser;
+package info.agrifam.apidiagagri.usoagua.secuser;
 
 import org.mapstruct.*;
 

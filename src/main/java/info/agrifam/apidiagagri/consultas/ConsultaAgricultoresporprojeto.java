@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.consultas;
+package info.agrifam.apidiagagri.consultas;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

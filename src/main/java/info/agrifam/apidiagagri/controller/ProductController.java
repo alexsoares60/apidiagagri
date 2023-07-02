@@ -1,9 +1,11 @@
-package com.gm2.pdv.controller;
+package info.agrifam.apidiagagri.controller;
 
-import com.gm2.pdv.dto.ProductDTO;
-import com.gm2.pdv.dto.ResponseDTO;
-import com.gm2.pdv.entity.Product;
-import com.gm2.pdv.repository.ProductRepository;
+
+import info.agrifam.apidiagagri.dto.ProductDTO;
+import info.agrifam.apidiagagri.dto.ResponseDTO;
+import info.agrifam.apidiagagri.entity.Product;
+import info.agrifam.apidiagagri.repository.ProductRepository;
+import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+
 
 @Controller
 @RequestMapping("/product")

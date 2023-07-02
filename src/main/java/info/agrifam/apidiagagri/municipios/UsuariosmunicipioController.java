@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.municipios;
+package info.agrifam.apidiagagri.municipios;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

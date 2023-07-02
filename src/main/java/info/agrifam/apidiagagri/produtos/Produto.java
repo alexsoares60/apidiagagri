@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.produtos;
+package info.agrifam.apidiagagri.produtos;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

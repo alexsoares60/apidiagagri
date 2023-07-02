@@ -1,19 +1,24 @@
-package info.agrifam.apidiag.produtos;
+package info.agrifam.apidiagagri.produtos;
 
-import info.agrifam.apidiag.pessoas.Pessoa;
-import info.agrifam.apidiag.pessoas.PessoaDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/produtosdestinacao")
-public class ProdutoDestinacaoController {
 
-    private final ProdutoDestinacaoRepository produtoDestinacaoRepository;
+public class ProdutoDestinacaoController {
+//
+//
+////    public String home(){
+////    return "chegou no controller produtos destinacao";
+////}
+//
+    private final ProdutosdestinacaoRepository produtoDestinacaoRepository;
     private final ProdutosdestinacaoMapper produtosdestinacaoMapper;
 
-    public ProdutoDestinacaoController(ProdutoDestinacaoRepository produtoDestinacaoRepository, ProdutosdestinacaoMapper produtosdestinacaoMapper) {
+    public ProdutoDestinacaoController(ProdutosdestinacaoRepository produtoDestinacaoRepository, ProdutosdestinacaoMapper produtosdestinacaoMapper) {
         this.produtoDestinacaoRepository = produtoDestinacaoRepository;
         this.produtosdestinacaoMapper = produtosdestinacaoMapper;
     }
@@ -35,11 +40,15 @@ public class ProdutoDestinacaoController {
             throw new IllegalArgumentException("Produtos destinacao ID não nula, faça um novo lançamento");
 
         }
-        Produtosdestinacao produtosdestinacao = produtoDestinacaoRepository.findById(produtosdestinacaoDto.getId()).orElseThrow();
-        Produtosdestinacao produtosdestinacao1 = produtosdestinacaoMapper.partialUpdate(produtosdestinacaoDto, produtosdestinacao);
-        return produtosdestinacaoMapper.toDto(produtoDestinacaoRepository.save(produtosdestinacao1));
+       Produtosdestinacao produtosdestinacao =  produtoDestinacaoRepository.findById(produtosdestinacaoDto.getId()).orElseThrow();
+//
+            Produtosdestinacao produtosdestinacao1 = produtosdestinacaoMapper.partialUpdate(produtosdestinacaoDto, produtosdestinacao);
+            return produtosdestinacaoMapper.toDto(produtoDestinacaoRepository.save(produtosdestinacao1));
 
+////        Produtosdestinacao produtosdestinacao1 = produtosdestinacaoMapper.partialUpdate(produtosdestinacaoDto, produtosdestinacao);
+//
+//
     }
-
-
+//
+//
 }

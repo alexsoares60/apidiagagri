@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.config;
+package info.agrifam.apidiagagri.config;
 
 
 import org.modelmapper.ModelMapper;

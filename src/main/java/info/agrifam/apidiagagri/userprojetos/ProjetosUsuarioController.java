@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.userprojetos;
+package info.agrifam.apidiagagri.userprojetos;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,8 +12,10 @@ import java.util.List;
 public class ProjetosUsuarioController {
 
   private final  ProjetosUsuarioRepository  projetosUsuarioRepository;
-    public ProjetosUsuarioController(ProjetosUsuarioRepository projetosUsuarioRepository){
+  private final ConsultaProjetosUsuariosProjetoRepository consultaProjetosUsuariosProjetoRepository;
+    public ProjetosUsuarioController(ProjetosUsuarioRepository projetosUsuarioRepository, ConsultaProjetosUsuariosProjetoRepository consultaProjetosUsuariosProjetoRepository){
         this.projetosUsuarioRepository = projetosUsuarioRepository;
+        this.consultaProjetosUsuariosProjetoRepository = consultaProjetosUsuariosProjetoRepository;
     };
 
     @GetMapping
@@ -27,8 +29,8 @@ public class ProjetosUsuarioController {
         return   all;
     }
     @GetMapping("/login/{login}")
-    public List<ProjetosUsuario> Get(@PathVariable(value = "login") String login){
-        List<ProjetosUsuario>  all =  projetosUsuarioRepository.findAllByLogin(login);
+    public List<ConsultaProjetosUsuariosProjeto> Get(@PathVariable(value = "login") String login){
+        List<ConsultaProjetosUsuariosProjeto>  all =  consultaProjetosUsuariosProjetoRepository.findAllByLogin(login);
         return   all;
     }
 }

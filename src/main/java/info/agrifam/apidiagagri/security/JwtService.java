@@ -1,4 +1,4 @@
-package com.gm2.pdv.security;
+package info.agrifam.apidiagagri.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -22,8 +22,11 @@ public class JwtService {
     public String generateToken(String username){
 
         Calendar currentTimeNow = Calendar.getInstance();
-        currentTimeNow.add(Calendar.MINUTE, expiration);
+        currentTimeNow.add(Calendar.HOUR, expiration);
         Date expirationDate = currentTimeNow.getTime();
+        int days = 10;
+        long time = days * 24 /*horas*/ * 60 /*min*/ * 60 /*seg*/ * 1000  /*milis*/;
+         expirationDate = new Date(System.currentTimeMillis() + time);
 
         SecretKey secretKey = getSecretKey();
 

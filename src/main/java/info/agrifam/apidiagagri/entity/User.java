@@ -1,9 +1,10 @@
-package com.gm2.pdv.entity;
+package info.agrifam.apidiagagri.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.Hibernate;
 
-import javax.persistence.*;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public class User {
     @Column(length = 60, nullable = false)
     private String password;
 
-    private boolean isEnabled;
+    private Integer isEnabled;
 
     @OneToMany(mappedBy = "user")
     @ToString.Exclude

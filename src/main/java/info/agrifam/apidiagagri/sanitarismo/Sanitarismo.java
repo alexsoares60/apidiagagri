@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.sanitarismo;
+package info.agrifam.apidiagagri.sanitarismo;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

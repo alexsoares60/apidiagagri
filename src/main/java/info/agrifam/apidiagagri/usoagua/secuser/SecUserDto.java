@@ -1,4 +1,4 @@
-package info.agrifam.apidiagagri.secuser;
+package info.agrifam.apidiagagri.usoagua.secuser;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

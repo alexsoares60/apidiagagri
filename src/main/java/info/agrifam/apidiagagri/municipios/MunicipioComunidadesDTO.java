@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.municipios;
+package info.agrifam.apidiagagri.municipios;
 
 import lombok.Data;
 import org.modelmapper.ModelMapper;

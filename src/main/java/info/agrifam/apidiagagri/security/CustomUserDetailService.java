@@ -1,9 +1,10 @@
-package com.gm2.pdv.security;
+package info.agrifam.apidiagagri.security;
 
-import com.gm2.pdv.dto.LoginDTO;
-import com.gm2.pdv.entity.User;
-import com.gm2.pdv.exceptions.PasswordNotFoundException;
-import com.gm2.pdv.service.UserService;
+
+import info.agrifam.apidiagagri.dto.LoginDTO;
+import info.agrifam.apidiagagri.entity.User;
+import info.agrifam.apidiagagri.exceptions.PasswordNotFoundException;
+import info.agrifam.apidiagagri.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

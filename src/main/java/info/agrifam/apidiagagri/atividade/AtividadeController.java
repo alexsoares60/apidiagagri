@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.atividade;
+package info.agrifam.apidiagagri.atividade;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;

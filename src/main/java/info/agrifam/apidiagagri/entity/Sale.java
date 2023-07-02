@@ -1,9 +1,10 @@
-package com.gm2.pdv.entity;
+package info.agrifam.apidiagagri.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.Hibernate;
 
-import javax.persistence.*;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;

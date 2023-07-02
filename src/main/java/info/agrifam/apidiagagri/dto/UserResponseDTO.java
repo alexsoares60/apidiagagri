@@ -1,4 +1,4 @@
-package com.gm2.pdv.dto;
+package info.agrifam.apidiagagri.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,5 +12,7 @@ public class UserResponseDTO {
     private Long id;
     private String name;
     private String username;
+
+
     private Integer isEnabled;
 }

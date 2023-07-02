@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.consultas;
+package info.agrifam.apidiagagri.consultas;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,4 +33,15 @@ public class ConsultaProjetosAgricultoresController {
 
 
         return consultaAgricultoresporprojeto;
-    }}
+    }
+    @GetMapping("/login/{login}")
+    public Optional<List<ConsultaAgricultoresporprojeto>> GetBylogin(@PathVariable(value = "login") String logindownload) {
+        Optional<List<ConsultaAgricultoresporprojeto>> consultaAgricultoresporprojeto = consultaAgricultoresporprojetoRepository.findByLoginDownload(logindownload);
+        if (consultaAgricultoresporprojeto.isPresent()) {
+            return consultaAgricultoresporprojetoRepository.findByLoginDownload(logindownload);
+        }
+
+
+        return consultaAgricultoresporprojeto;
+    }
+}

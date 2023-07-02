@@ -1,10 +1,9 @@
-package com.gm2.pdv.entity;
+package info.agrifam.apidiagagri.entity;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
 import lombok.*;
 import org.hibernate.Hibernate;
-
-import javax.persistence.*;
-import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.diagnosticos;
+package info.agrifam.apidiagagri.diagnosticos;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -31,5 +30,14 @@ public class ConsultaDiagnosticosController {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
         return consultadiagnosticoRepository.findAllByMunidIn(Ids);
+    }
+    @GetMapping("/login/{arglogindownload}")
+    public List<Consultadiagnostico> GetCaracterizacaoLogin(@PathVariable(value = "arglogindownload") String arglogindownload){
+        if (arglogindownload == null) {
+            throw new IllegalArgumentException("login ID  nula, ");
+
+        }
+
+        return consultadiagnosticoRepository.findAllByLogindownload(arglogindownload);
     }
 }

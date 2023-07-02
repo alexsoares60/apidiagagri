@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.usoagua;
+package info.agrifam.apidiagagri.usoagua;
 
 
 import org.springframework.web.bind.annotation.*;

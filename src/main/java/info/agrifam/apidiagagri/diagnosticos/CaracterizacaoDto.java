@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.diagnosticos;
+package info.agrifam.apidiagagri.diagnosticos;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -32,4 +32,8 @@ public class CaracterizacaoDto implements Serializable {
     private final Character stcancelado;
     @Size(max = 32)
     private final String login;
+    private Character fazdownload;
+
+    @Size(max = 32)
+    private String loginDownload;
 }

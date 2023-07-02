@@ -1,6 +1,6 @@
-package com.gm2.pdv.repository;
+package info.agrifam.apidiagagri.repository;
 
-import com.gm2.pdv.entity.Sale;
+import info.agrifam.apidiagagri.entity.Sale;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.atividade;
+package info.agrifam.apidiagagri.atividade;
 
 import jakarta.validation.constraints.Size;
 import lombok.Data;

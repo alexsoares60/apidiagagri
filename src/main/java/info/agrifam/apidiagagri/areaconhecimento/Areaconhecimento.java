@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.areaconhecimento;
+package info.agrifam.apidiagagri.areaconhecimento;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -14,7 +14,7 @@ public class Areaconhecimento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idareadeconhecimento", nullable = false)
-    private Integer id;
+    private Integer idareadeconhecimento;
 
     @Size(max = 80)
     @NotNull

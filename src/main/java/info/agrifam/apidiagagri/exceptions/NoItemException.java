@@ -1,4 +1,4 @@
-package com.gm2.pdv.exceptions;
+package info.agrifam.apidiagagri.exceptions;
 
 public class NoItemException extends RuntimeException {
     public NoItemException(String message) {

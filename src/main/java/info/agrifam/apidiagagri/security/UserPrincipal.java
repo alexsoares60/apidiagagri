@@ -1,6 +1,7 @@
-package com.gm2.pdv.security;
+package info.agrifam.apidiagagri.security;
 
-import com.gm2.pdv.entity.User;
+
+import info.agrifam.apidiagagri.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

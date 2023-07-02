@@ -1,34 +1,28 @@
 package info.agrifam.apidiagagri.areasprodutivas;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Immutable;
 
 import java.math.BigDecimal;
-import java.time.Instant;
+import java.sql.Timestamp;
 
-/**
- * Mapping for DB view
- */
 @Getter
 @Setter
 @Entity
-@Immutable
-@Table(name = "viewareasprodutivas")
-public class Viewareasprodutiva {
+@Table(name = "tbmunicaracareasprodutivas", schema = "agrifa04_diagmunicipal")
+public class CaracterizacaoAreasProdutivas {
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
     @NotNull
-    @Column(name = "idcaracterizacao", nullable = false)
+    @Column(nullable = false)
+    private Integer identificacaoid;
+
     private Integer idcaracterizacao;
 
     @Size(max = 50)
@@ -53,20 +47,17 @@ public class Viewareasprodutiva {
     private String login;
 
     @Column(name = "dtpreparosolo")
-    private Instant dtpreparosolo;
+    private Timestamp dtpreparosolo;
 
     @Column(name = "dtestimadacolheita")
-    private Instant dtestimadacolheita;
-
-    @Column(name = "dtalteracao")
-    private Instant dtalteracao;
+    private Timestamp dtestimadacolheita;
 
     @NotNull
     @Column(name = "dtcreated", nullable = false)
-    private Instant dtcreated;
+    private Timestamp dtcreated;
 
-    @Column(name = "identificacaoid")
-    private Integer identificacaoid;
+    @Column(name = "dtalteracao")
+    private Timestamp dtalteracao;
 
     @Column(name = "stcancelado")
     private Character stcancelado;
@@ -87,17 +78,5 @@ public class Viewareasprodutiva {
 
     @Column(name = "pessoaid")
     private Integer pessoaid;
-
-    @Column(name = "fazdownload")
-    private Character fazdownload;
-
-    @Size(max = 32)
-    @Column(name = "logindownload", length = 32)
-    private String logindownload;
-
-    @Size(max = 200)
-    @NotNull
-    @Column(name = "pesnm", nullable = false, length = 200)
-    private String pesnm;
 
 }

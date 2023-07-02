@@ -1,14 +1,13 @@
-package info.agrifam.apidiag.diagnosticos;
+package info.agrifam.apidiagagri.diagnosticos;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Immutable;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.time.LocalDate;
 
@@ -25,6 +24,10 @@ public class Consultadiagnostico {
     @NotNull
     @Column(name = "idcaracterizacaoupf", nullable = false)
     private Integer idcaracterizacaoupf;
+
+    @Lob
+    @Column(name = "espectativaater")
+    private String espectativaater;
 
     @NotNull
     @Column(name = "dtcaracterizacaoupf", nullable = false)
@@ -60,7 +63,7 @@ public class Consultadiagnostico {
 
     @Size(max = 2)
     @Column(name = "sguf", length = 2)
-    private String sguf;
+    private String uf;
 
     @Column(name = "munid")
     private Integer munid;
@@ -85,5 +88,13 @@ public class Consultadiagnostico {
     @Size(max = 18)
     @Column(name = "cpf_commascara", length = 18)
     private String cpfCommascara;
+
+
+    @Column(name = "fazdownload")
+    private Character fazdownload;
+
+    @Size(max = 32)
+    @Column(name = "logindownload", length = 32)
+    private String logindownload;
 
 }

@@ -1,4 +1,4 @@
-package info.agrifam.apidiag.usoagua;
+package info.agrifam.apidiagagri.usoagua;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
