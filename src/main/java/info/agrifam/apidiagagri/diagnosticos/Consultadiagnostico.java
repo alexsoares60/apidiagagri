@@ -96,5 +96,5 @@ public class Consultadiagnostico {
     @Size(max = 32)
     @Column(name = "logindownload", length = 32)
     private String logindownload;
-
+    private Integer idprojeto;
 }

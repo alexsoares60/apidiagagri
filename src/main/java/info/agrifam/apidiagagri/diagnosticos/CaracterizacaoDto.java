@@ -36,4 +36,6 @@ public class CaracterizacaoDto implements Serializable {
 
     @Size(max = 32)
     private String loginDownload;
+    private Integer idprojeto;
+
 }

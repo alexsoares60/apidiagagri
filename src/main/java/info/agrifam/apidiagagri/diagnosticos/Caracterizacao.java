@@ -71,4 +71,7 @@ public class Caracterizacao {
     @Column(name = "dtalteracao")
     private Instant dtalteracao;
 
+    @Column(name = "idprojeto")
+    private Integer idprojeto;
+
 }
