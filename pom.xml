@@ -19,9 +19,9 @@
         <org.mapstruct.extensions.spring.version>1.0.1</org.mapstruct.extensions.spring.version>
         <spring-security.version>6.0.3</spring-security.version>
         <spring.version>6.0.8</spring.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <java.version>17</java.version>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <java.version>19.0.1</java.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
     </properties>
     <dependencies>
