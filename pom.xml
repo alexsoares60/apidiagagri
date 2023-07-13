@@ -119,10 +119,10 @@
 
     <build>
         <plugins>
-            <!--<plugin>
+             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
+                 <configuration>
                     <excludes>
                         <exclude>
                             <groupId>org.project-lombok</groupId>
@@ -131,12 +131,7 @@
                     </excludes>
                 </configuration>
             </plugin>
-            -->
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.7</version>
-            </plugin>
+
 <!--        </plugins>-->
         </plugins>
     </build>
