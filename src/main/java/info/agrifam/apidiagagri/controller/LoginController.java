@@ -38,6 +38,7 @@ public class LoginController {
 
     private String nome;
     private String  email;
+    private int idpessoacadastrador;
 
     public LoginController(SecUserRepository secUserRepository) {
         this.secUserRepository = secUserRepository;
@@ -56,8 +57,9 @@ public class LoginController {
                 System.out.printf(secUser.toString());
                nome = secUser.get().getName();
                email = secUser.get().getEmail();
+               idpessoacadastrador = secUser.get().getIdpessoaUsuario();
             }
-            return new ResponseEntity<>(new TokenDTO(token, expiration, loginData.getUsername(),email, nome ), HttpStatus.OK);
+            return new ResponseEntity<>(new TokenDTO(token, expiration, loginData.getUsername(),email, nome, idpessoacadastrador ), HttpStatus.OK);
 
         } catch (Exception error){
             return new ResponseEntity<>(new ResponseDTO(error.getMessage()), HttpStatus.UNAUTHORIZED);

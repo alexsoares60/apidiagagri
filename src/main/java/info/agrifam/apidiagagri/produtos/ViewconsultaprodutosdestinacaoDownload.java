@@ -103,4 +103,8 @@ public class ViewconsultaprodutosdestinacaoDownload {
     @Column(name = "comunidade", length = 60)
     private String comunidade;
 
+    @NotNull
+    @Column(name = "id", nullable = false)
+    private Long id;
+
 }

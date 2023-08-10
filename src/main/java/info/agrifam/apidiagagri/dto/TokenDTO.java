@@ -14,4 +14,5 @@ public class TokenDTO {
     private String login;
     private String email;
     private String nome;
+    private int idpessoacadastrador;
 }

@@ -44,6 +44,7 @@ public class CaracterizacaoController {
 //            System.out.println(caracterizacaoUPFnova.toString());
 
         }
+        caracterizacao.setFazdownload('N');
         return caracterizacaoMapper.toDto(caracterizacaoRepository.save(caracterizacao));
     }
     @PostMapping("/alterar")
@@ -53,7 +54,9 @@ public class CaracterizacaoController {
 
         }
         Caracterizacao caracterizacao = caracterizacaoRepository.findById(caracterizacaoDto.getId()).orElseThrow();
+        caracterizacao.setFazdownload('N');
         Caracterizacao caracterizacao1 = caracterizacaoMapper.partialUpdate(caracterizacaoDto, caracterizacao);
+        caracterizacao1.setFazdownload('N');
         return caracterizacaoMapper.toDto(caracterizacaoRepository.save(caracterizacao1));
 
     }

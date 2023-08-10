@@ -39,7 +39,7 @@ public class CaracterizacaoAreasProdutivas {
     private Integer upfidproduto;
 
     @NotNull
-    @Column(name = "idmobile", nullable = false)
+    @Column(name = "idmobile")
     private Integer idmobile;
 
     @Size(max = 255)
@@ -53,7 +53,7 @@ public class CaracterizacaoAreasProdutivas {
     private Timestamp dtestimadacolheita;
 
     @NotNull
-    @Column(name = "dtcreated", nullable = false)
+    @Column(name = "dtcreated")
     private Timestamp dtcreated;
 
     @Column(name = "dtalteracao")

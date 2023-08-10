@@ -2,6 +2,7 @@ package info.agrifam.apidiagagri.identificacaoupf;
 
 
 
+import info.agrifam.apidiagagri.pessoas.Pessoa;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,7 +36,19 @@ public class IdentificacaoupfController {
     public IdentificacaoupfDto save(@RequestBody IdentificacaoupfDto identificacaoupfDto) {
 
         Identificacaoupf identificacaoupf =  identificacaoupfMapper.toEntity(identificacaoupfDto);
-        return identificacaoupfMapper.toDto(identificacaoupfRepository.save(identificacaoupf));
+
+        Optional <Identificacaoupf> identificacaoupfOptional = identificacaoupfRepository.findByIdcaracterizacaoupfAndMunidAndIdpessoa(identificacaoupfDto.getIdcaracterizacaoupf(),identificacaoupfDto.getMunid(),identificacaoupfDto.getIdpessoa());
+        if (identificacaoupfOptional.isPresent()){
+            System.out.println(identificacaoupfOptional.toString());
+
+            Identificacaoupf identificacaoupf2 =  identificacaoupfRepository.findByIdcaracterizacaoupfAndMunidAndIdpessoa(identificacaoupfDto.getIdcaracterizacaoupf(),identificacaoupfDto.getMunid(),identificacaoupfDto.getIdpessoa()).orElseThrow();
+            Identificacaoupf identificacaoupf1 = identificacaoupfMapper.partialUpdate(identificacaoupfDto,identificacaoupf2);
+
+            return identificacaoupfMapper.toDto(identificacaoupfRepository.save(identificacaoupf1));
+        } else {
+            return identificacaoupfMapper.toDto(identificacaoupfRepository.save(identificacaoupf));
+        }
+
     }
     @PostMapping("/alterar")
     public IdentificacaoupfDto update(@RequestBody  IdentificacaoupfDto identificacaoupfDto) {
