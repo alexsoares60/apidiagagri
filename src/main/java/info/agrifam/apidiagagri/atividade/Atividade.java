@@ -1,6 +1,7 @@
 package info.agrifam.apidiagagri.atividade;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,5 +25,9 @@ public class Atividade {
 
     @Column(name = "stcancelado")
     private Character stcancelado;
+
+    @NotNull
+    @Column(name = "stindividual_coletiva", nullable = false)
+    private Character stindividualColetiva;
 
 }

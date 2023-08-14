@@ -14,4 +14,6 @@ public class AtividadeDto implements Serializable {
     @Size(max = 100)
     private final String atvdescricao;
     private final Character stcancelado;
+    private final Character stindividualColetiva;
+
 }

@@ -22,8 +22,7 @@ public class AtividadeController {
     @GetMapping()
     public List<Atividade> Get(){
 
-        List<Atividade> all = atividadeRepository.findAll( Sort.by("id") );
-        return all;
+        return atividadeRepository.findAll( Sort.by("id") );
 
     }
     @GetMapping("/{id}")
